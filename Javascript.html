@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>        
+    	<link rel="stylesheet" type="text/css" href="reset.css" /> 
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />  
+   
+   	 	<title>W3B Design</title>
+        	
+			<script type="text/javascript">
+			// Message box
+				function displaymessage(){
+					alert("Hello, you just clicked me!");
+				}
+       	 	</script>
+				
+
+    </head>
+    <body> 
+                
+         <div id="container"><!--  Start of Container Div  -->
+            <div id="header"><!--  Start of Header Div  -->
+            <img src="images/logo.png" id="header_logo" />  
+            <h1>Customisation of Web Pages</h1>
+        </div>
+               
+          <!--  this is start of the menu block, it will be floated left -->
+         <div id="menu">
+            <ul>
+                <li><a href="index.html" id="HomeLink">HOME</a></li>
+                <li><a href="CSS.html" id="CSSLink">CSS</a></li>
+                <li><a href="Javascript.html" id="JavaScriptLink">JavaScript</a></li>
+                <li><a href="Design.html" id="DesignLink">Design</a></li>
+                <li><a href="Test.html" id="TestLink">Test</a></li>
+           </ul>
+         </div><!--  this is end of the menu block -->
+                            
+                         
+            <div class="exampleblock" id="myClock">
+                Clock
+            </div>    
+           
+                <script type="text/javascript">
+                // this is a working example of a clock
+                var timer = setTimeout(updateTheClock,1000);
+                
+                function updateTheClock() {
+                    var thisTime = new Date();
+                    var h = thisTime.getHours();
+                    var m = thisTime.getMinutes();
+                    var s = thisTime.getSeconds();								
+                    var time = h + ":" + m + ":" + s;
+                    document.getElementById("myClock").innerHTML = time;
+                    timer = setTimeout(updateTheClock,1000);
+                }
+               </script>
+                           
+                  
+           <div id="submenuu2">
+                <ul>
+                    <li><a href="FundamentalsOfJS.html" id="FundamentalsOfJS">Fundamentals of a Scripting Language</a></li>
+                    <li><a href="FunctionalityOfJS.html" id="FunctionalityOfJS">How Scripting Languages Improve Functionality</a></li>
+                    <li><a href="BrowserIssues.html" id="BrowserIssues">Cross Browser Issues</a></li>
+               </ul>
+            </div>
+            
+            <h3>What is JavaScript?</h3>
+             
+            <p>JavaScript is a client side scripting language and is known to add functionality and interactivity to HTML pages and much more. Javascript is also known to work well in other browsers, such as, Internet Explorer, Mozilla Firefox, Safari and others. Like CSS, there are many ways that JavaScript can be included in your HTML pages. It can be saved as an External file or included in the head section of your HTML pages. If you wanted to put your JavaScript code in the HTML code then you would need to use this link below:</p>
+                        
+<pre>&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;</pre>
+
+            <h3>What can it do?</h3>
+            
+            <p>There are many methods that can be used in JavasScript including, Variables, Functions, Events and many others. I will be explaining each of the methods and others below.</p>
+                
+             <h3>Variables</h3> 
+             
+             <p>Variables are a way of holding together values and are created by using the <b>var</b> statement. Variables can hold text data, numerical data, true/false and others together. For the variable to work properly you will need to assign the = to the right hand side of the <b>var</b> statement. An example of a variable is below:</p>
+
+<pre>var myName = Cerys
+var myAge = 16</pre>
+                
+            <h3>Functions</h3>
+            
+            <p>A function is another method in JavasScript and performs tasks. The function will be executed by an event or you can give the function your own name. Functions are usually in the &lt;head&gt; or &lt;body&gt; section in the page. You will also need to make sure that when you call the function it gets loaded into the page before it is called. Click on the button below for it to alert you with a message box. For me to do this I used the <b>function</b> below the button: </p>
+                        
+             <form>
+                 <input type="button" value="Click me!" onclick="displaymessage()" />
+            </form>
+                
+ 
+<pre>function displaymessage(){
+alert("Hello, welcome to the JavaScript section of this Website.");
+}</pre>
+                
+            <p>I don't know if you have noticed but I have also inserted a digital clock underneath the main menu to the right hand side, at the top of the page. I implemented this by using the scripting language tag and also using <b>variables</b> and <b>functions</b> . Below is the code that I used to do this:</p>
+
+<pre>&lt;script type="text/javascript"&gt;
+var timer = setTimeout(updateTheClock,1000);
+							
+function updateTheClock() {
+var thisTime = new Date();
+var h = thisTime.getHours();
+var m = thisTime.getMinutes();
+var s = thisTime.getSeconds();								
+var time = h + ":" + m + ":" + s;
+document.getElementById("myClock").innerHTML = time;
+timer = setTimeout(updateTheClock,1000);
+}
+&lt;/script&gt;</pre> 
+
+
+            <h3>Events</h3>
+        
+            <p>An Event is another method that is used in JavaScript and they respond to actions that the user makes. For example, the button above under the functions section is an event because when you click on it a message is displayed to the user. I used the <b>onClick</b> button to make the message to display as when you click on the button the JavaScript code will be triggered and will be displayed. Below is the code that I used for the button: </p>
+<pre>&lt;input type="button" value="Click me!" onclick="displaymessage()" /&gt;</pre>                   
+            <p>There are many different <b>events</b> that you can use, not just the onclick event. Another example of an event is <b>onMouseOver</b>, which can apply to an image or link when the user moves their mouse over the object. All of the event handlers within JavaScript all start with <b>on</b> and each of the events apply to different things. Some of the most common events that are used are, <b> onClick, onChange, onLoad, onMouseOver and onKeyPress</b>. </p>
+                    
+            <p>Overall, there are many things that JavaScript can do and one of the main things that it does is that it's 																			a client side scripting language and it can change the page content dynamically.</p>
+            	                     
+        <div id="footer"> &copy; 2012 - Cerys Gibbins </div>
+            </div> 
+        </body>
+</html>

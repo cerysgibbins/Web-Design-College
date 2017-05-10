@@ -1,0 +1,241 @@
+#header {
+	display: block;
+	padding-top: 8px;
+	text-align:center; 
+}
+
+#container {
+	margin: 0 auto 0 auto; /* -- centres up the website in the browser -- */
+	width: 900px;		/* -- centres up the website in the browser -- */
+	padding: 20px;
+	background: transparent url('images/transparent.png') repeat top left;
+	min-height: 100%;
+	border: thick;
+}
+
+#header h1 { 
+	text-indent: -9999px; /* -- hides the original text --*/
+	background: transparent url('fonts/CustomisationOfWebPages.png') no-repeat bottom center;	
+	padding-top: 0px; 
+}
+
+
+body, html {
+	background: black url('images/background.jpg') repeat-y center;
+	height: 100%;
+}
+
+#menu li {
+	/* -- this block floats my main menu across the homepage -- */
+	float: left;
+	margin-right: 35px;		
+	margin-top: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: dotted;
+}
+
+#menu li a { 
+	text-indent: -9999px;
+	display: block;
+}
+
+#HomeLink {
+	/* -- an image of the font that displays the 'HOME' link --*/
+	background: transparent url('fonts/home.png') no-repeat bottom center;
+	width: 72px;
+}
+
+#HomeLink:hover {
+	/* -- an image of the font that displays the 'HOME' link in a different font colour --*/
+	background: transparent url('fonts/home2.png') no-repeat bottom center;
+	width: 72px;
+}
+
+#CSSLink {
+	background: transparent url('fonts/css.png') no-repeat bottom center;
+	width: 47px;
+}
+
+#CSSLink:hover {
+	background: transparent	url('fonts/css2.png') no-repeat bottom center;
+	width: 47px;
+} 
+
+#JavaScriptLink {
+	background: transparent url('fonts/Javascript.png') no-repeat bottom center;
+	width: 132px;
+}
+
+#JavaScriptLink:hover {
+	background: transparent url('fonts/Javascript2.png') no-repeat bottom center;
+	width: 132px; 
+} 
+
+#DesignLink {
+	background: transparent url('fonts/Design.png') no-repeat bottom center;
+	width: 84px;
+}
+
+#DesignLink:hover  {
+	background: transparent url('fonts/Design2.png') no-repeat bottom center;
+	width: 84px;
+}
+
+#TestLink {
+	background: transparent url('fonts/test.png') no-repeat bottom center;
+	width: 62px;
+}
+
+#TestLink:hover {
+	background: transparent url('fonts/test2.png') no-repeat bottom center;
+	width: 62px;
+}
+
+p { /* -- this had set all my paragraphs in my code to the same size font and colour --*/
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px; 
+	color: #000000;
+	padding: -20px; 
+	padding-top: 60px 60px 60px 0px;
+}
+
+#body_image {
+	padding-top: 20px;
+	padding-left: 250px;
+}
+
+#footer {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px; 
+	color: #000000;
+	padding-bottom: 100px;
+}
+
+#submenu { 
+	padding-top: 60px;	
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic; 
+	color: #F36;
+}
+
+h3 {
+	padding-top: 20px;	
+}
+
+#BoxModel {
+	padding: 20px 20px 20px 280px;
+}
+
+pre {
+	font-weight:bold;
+	color: #606;
+}
+
+#withDOCTYPE { /* -- an image to show my website in Internet Explorer with the DOcTYPE statement --*/
+	padding: 20px 20px 20px 250px;	
+}
+
+#withoutDOCTYPE { /* -- an image to show my website in Internet Explorer without the DOcTYPE statement --*/
+	padding: 20px 20px 20px 250px;	
+}
+
+#IEMFBoxModel {
+	padding: 20px 20px 20px 250px;	
+}
+
+	
+#CSSStyles {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px; 
+}
+
+#submenuu2 {
+	clear: left;
+	padding-top: 30px;;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic; 
+	color: #F36;
+	
+}
+
+#myClock {
+	float: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color:#333333;
+}
+
+#sitemap {
+	padding: 20px 20px 20px 200px;	
+}
+
+#scan1 {
+	padding: 20px 20px 20px 200px;	
+}
+
+#scan2 {
+	padding: 20px 20px 20px 200px;
+}
+
+#scan3 {
+	padding: 20px 20px 20px 200px;
+}
+
+#wireframe {
+	padding: 20px 20px 20px 200px;
+}
+
+ul {
+	display: block;
+}
+
+#menu1 {
+	background: #F8981E;
+	width:200px;
+	padding-left: 20px;
+}
+
+#menu1 li a {
+	color: #000000;
+}
+
+#menu2 {
+	background: #00B6DD;
+	width:200px;
+	padding-left: 20px;
+}
+
+#menu2 li a {
+	color: #000000;
+}
+
+#menu3 {
+	background: #9933CC;
+	width:200px;
+	padding-left: 20px;
+}
+
+#menu3 li a {
+	color: #000000;
+}
+
+#menu1 li a:hover  {
+	color: white;
+	font-weight: bold;
+}	
+
+#menu2 li a:hover  {
+	color: white;
+	font-weight: bold;
+}
+
+#menu3 li a:hover  {
+	color: white;
+	font-weight: bold;
+}
+
+
+
+
+

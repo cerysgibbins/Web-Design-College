@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>        
+    	<link rel="stylesheet" type="text/css" href="reset.css" /> 
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />  
+   
+   	 	<title>W3B Design</title>
+    </head>
+
+    <body>
+        
+             <div id="container"><!--  Start of Container Div  -->
+                <div id="header"><!--  Start of Header Div  -->
+                <img src="images/logo.png" id="header_logo" />  
+                <h1>Customisation of Web Pages</h1>
+            </div>
+                   
+              <!--  this is start of the menu block, it will be floated left -->
+             <div id="menu">
+                <ul>
+                    <li><a href="index.html" id="HomeLink">HOME</a></li>
+                    <li><a href="CSS.html" id="CSSLink">CSS</a></li>
+                    <li><a href="Javascript.html" id="JavaScriptLink">JavaScript</a></li>
+                    <li><a href="Design.html" id="DesignLink">Design</a></li>
+                    <li><a href="Test.html" id="TestLink">Test</a></li>
+               </ul>
+             </div><!--  this is end of the menu block -->
+                          
+              <div id="submenu">
+                <ul>
+                    <li><a href="BoxModels.html" id="BoxModelsLink">Box Models</a></li>
+                    <li><a href="DifferentStylesOfCSS.html" id="DifferentStylesOfCSSLink">Different Styles Of CSS</a></li>
+                </ul>
+             </div>
+                      
+          <h3>Box Models</h3>
+                     
+          <p>In CSS the Box Models are what contains the elements of HTML. The Box Model contains the margin, border, padding and the content. The Box Model allows us to put a border around certain elements and space them out.</p>
+                     
+          <p>The box model components all do different things. The margin is the area outside the border and it doesn't have a background, it's transparent. The border then goes around the padding and the content and its affected by the background colour of the border. The padding clears the area thats around the content and then lastly the content is the content within the box where text and images can go.</p> 
+                     
+          <p>You can also have width and height in the box model but you need to know how the box model works. This is because when you put the width and height properties to an element in CSS, you just add the width and height to the content area. So, if you wanted to calculate the full size of an element you would need to apply the margin, border and padding elements.</p> 
+          
+          <p>There are different properties to each of the elements like top, bottom, left and right. There's also many styles to the <b>border</b> element, for example, dotted, dashed, inline and many others. As you can see I have used a dotted border for my floated menu.</p>
+          
+          <p>Below is an example of how a box model looks:</p>
+                                 
+                             <img src="images/BoxModel.png" id="BoxModel"/> 
+                             
+          <h3>DOCTYPE</h3>
+          
+          <p>The DOCTYPE statement is used to make sure that browsers render your content accurately.</p> 
+                    
+           <p>An HTML file <b>with</b> a DOCTYPE statement looks like this:</p>
+                    
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;</pre>  
+        
+        <p>Below is an image of my website <b>with</b> a DOCTYPE statement in the Internet Explorer browser.</p>
+                    
+                    		<img src="images/withDOCTYPE.png" alt="This image is suppose to show you what my website should look like with a DOCTYPE statement in Internet Explorer" id="withDOCTYPE" />   
+        
+        <p>Below is an image of my website <b>without</b> a DOCTYPE statement in the Internet Explorer browser.</p>
+                    
+                    		<img src="images/withoutDOCTYPE.png" alt="This image is suppose to show you what my website looks like without a DOCTYPE statement in Internet Explorer" id="withoutDOCTYPE" />   
+                          
+                          
+         <p>As you can see <b>without</b> a DOCTYPE statement all of your content goes to the left hand side of the page. Whereas, <b>with</b> the DOCTYPE statement it aligns all the content in the center of the page.</p>
+                      <p><b>Also, if the DOCTYPE statement is not used then the browser will open up in quirks mode. Quirks mode doesn't render the web page correctly and it displays the web page in the browser incorrectly. Below is an image of box model in Internet Explorer(on the left) and Mozilla Firefox(on the right):- </b></p>
+                       
+                       <img src="images/IEMFBoxModel.png" alt="This image is suppose to show you what a box model looks like in Internet Explorer and Mozilla Firefox" id="IEMFBoxModel"/> 
+                 		
+           <p><b>As you can see above I have screened shot the same box model in two different browsers. It looks as if I have given different dimensions but I have actually given them both the same dimensions. Below is the code that I have used for the box model: </b></p>
+                            
+<pre> &lt;style type="text/css"&gt;
+            
+#boxmodel {
+background: purple;
+width: 200px;
+border: 3px solid black;
+padding: 50px;
+}
+                        
+#boxmodel p {
+background: pink;
+}
+&lt;/style&gt;
+</pre>
+                            
+                        
+                       
+                                        
+		  <div id="footer"> &copy; 2012 - Cerys Gibbins </div>
+                </div> 
+        </body>
+
+</html>

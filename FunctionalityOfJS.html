@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>        
+    	<link rel="stylesheet" type="text/css" href="reset.css" /> 
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <script type="text/javascript" src="http://nptcstudents.co.uk/andrewg/jsweb/scripts/jquery.js"></script>
+        <script type="text/javascript" src="trans-javascript.js"></script>
+ 
+        
+   	 	<title>W3B Design</title>
+     </head>
+     <body> 
+        
+             <div id="container"><!--  Start of Container Div  -->
+                <div id="header"><!--  Start of Header Div  -->
+                <img src="images/logo.png" id="header_logo" />  
+                <h1>Customisation of Web Pages</h1>
+            </div>
+                   
+              <!--  this is start of the menu block, it will be floated left -->
+             <div id="menu">
+                <ul>
+                    <li><a href="index.html" id="HomeLink">HOME</a></li>
+                    <li><a href="CSS.html" id="CSSLink">CSS</a></li>
+                    <li><a href="Javascript.html" id="JavaScriptLink">JavaScript</a></li>
+                    <li><a href="Design.html" id="DesignLink">Design</a></li>
+                    <li><a href="Test.html" id="TestLink">Test</a></li>
+               </ul>
+             </div><!--  this is end of the menu block -->
+                      
+             
+            <div class="exampleblock" id="myClock">
+                Clock
+            </div>    
+           
+                <script type="text/javascript">
+                // this is a working example of a clock
+                var timer = setTimeout(updateTheClock,1000);
+                
+                function updateTheClock() {
+                    var thisTime = new Date();
+                    var h = thisTime.getHours();
+                    var m = thisTime.getMinutes();
+                    var s = thisTime.getSeconds();								
+                    var time = h + ":" + m + ":" + s;
+                    document.getElementById("myClock").innerHTML = time;
+                    timer = setTimeout(updateTheClock,1000);
+                }
+               </script>
+               
+                      
+           <div id="submenuu2">
+                <ul>
+                    <li><a href="FundamentalsOfJS.html" id="FundamentalsOfJS">Fundamentals of a Scripting Language</a></li>
+                    <li><a href="FunctionalityOfJS.html" id="FunctionalityOfJS">How Scripting Languages Improve Functionality</a></li>
+                    <li><a href="BrowserIssues.html" id="BrowserIssues">Cross Browser Issues</a></li>
+               </ul>
+            </div>
+                    
+            <h3>How can JavaScript enhance or improve functionality?</h3>
+            
+            <p>JavaScript can enhance and improve the functionality in web browsers because JavaScript knows when different web browsers are being used and they react when the resolution is different. For the client side of JavaScript the scripting does all the calculations for you and the front-end context uses the scripting technique through a user interface. JavaScript can improve the functionality of a website by using client side because it will allow you to use validation, events and more. The validation is used because it prevents the users from entering incorrect data and it prevents incorrections and saves the server from doing extra work. There are many different uses of JavaScript that help improve the functionality of the web page. For example, you can change how the page is displayed and it allows you to do tasks. Some of the uses of JavaScript are below.</p>
+            
+           
+   <script language="javascript" type="text/javascript">
+            function grabData () {
+				var userName = document.forms.mailform.name.value;
+                var htmlChunk = document.getElementById('formgroup');
+                htmlChunk.innerHTML = ("<p>Hello " + userName + "! How are you today?</p>");
+            }
+        </script>
+         
+         <h3>Dynamic Pages</h3> 
+         
+         <p>Dynamic Pages give users more experience of how web pages work. For example, they allow the users to fade out and in images by pressing a button on the webpage. This is done by applying HTML features to the pages. Below is an example:</p>      
+        
+	
+         <div><img src="http://nptcstudents.co.uk/andrewg/jsweb/images/jswebMinorLogo144x68.png" width="144" height="68" alt="JSWeb Logo example" id="task2" /></div>
+                <input type="button" onclick="fadeout()" value="Fade Out"  />
+                <input type="button" onclick="fadein()" value="Fade In"  /> 
+		
+
+         
+        <h3>Getting Data from Forms</h3>
+        
+        <p>When JavaScript gets applied to HTML pages it creates a <b>document.object</b> and the <b>document.object</b> allows the HTML pages to be accessed from within a script. You can also extract data from forms and not only retrieve the data. When you extract the data you will need to enter the data into a box for example and then the data will be retrieved to you. For example, when your enter you name in the box below and then click the button the information that you put into the box will then be given out.</p>
+        
+                
+            <!--script to retrieve data from form and show the data that has been entered in the messagebox-->
+            <div id="script">
+        <form class="contactForm" name="mailform" action="#" method="get" id="mailform">
+                <div class="formgroup">
+                <label for="name">Please Enter Full Name:</label>
+                <input name="name" type="text" />
+                </div>
+        </form>
+        
+        <div id="formgroup">
+            <input type="button" onclick="grabData();" value="Show Name" />
+        </div>
+        
+        </div>
+       
+       <h3>Navigation</h3>
+       
+       <p>JavaScript can also be used to help improve the navigation on a website. It improves the website because it can make the website look less cluttered and messy if you already happened to have a busy website. Below I have given a live example and you can see that all menus are closed. This is because I have set all the menus to 'hide'. When you click on one menu I have hiden the other two menus until you click on it. For example, when you click on the 'Our Service' menu below therewill be other links(not working). Then when you go to click on the 'Our Portfolio' menu the previous menu will close. This is useful because it saves up space on the page and doesn't look messy. You wouldn't be able to do this with HTML as it doesn't allow you to interact the same way as JavaScript.</p>
+       
+            <!-- folding menu -->
+            <div id="mainMenu">
+            	<div id="menu1" class="foldingMenu">
+                <h2><a href="javascript:openMenu('submenu1');">Our Services</a></h2>
+                <ul id="submenu1">
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Publication Design</a></li>
+                    <li><a href="#">Web Design</a></li>   
+                    <li><a href="#">Website Optimisation</a></li>
+                    <li><a href="#">Animation</a></li>
+                </ul>
+            </div>
+         
+            <div id="menu2" class="foldingMenu">
+                <h2><a href="javascript:openMenu('submenu2');">Our Portfolio</a></h2>
+                <ul id="submenu2">
+                    <li><a href="#">Print Design</a></li>
+                    <li><a href="#">Electronic Design</a></li>
+                    <li><a href="#">Other Case Studies</a></li>   
+                </ul>
+            </div>
+         
+            <div id="menu3" class="foldingMenu">
+                <h2><a href="javascript:openMenu('submenu3');">About Us</a></h2>
+                <ul id="submenu3">
+                    <li><a href="#">Studio History</a></li>
+                    <li><a href="#">Studio Heads</a></li>
+                    <li><a href="#">Contact Us</a></li>   
+                </ul>
+            </div>
+        </div>
+ 
+	<script type="text/javascript">
+//JavaScript which will allow the user to interact with the menu 
+		function hideMenu(thismenu) {
+			document.getElementById(thismenu).style.visibility = "hidden";
+			document.getElementById(thismenu).style.display = "none";		
+		}
+		
+		function hideALLMenus() {
+			hideMenu('submenu1');
+			hideMenu('submenu2');
+			hideMenu('submenu3');
+		}
+	
+	
+		function openMenu(thismenu2) {
+			hideALLMenus();
+			document.getElementById(thismenu2).style.visibility = "visible";
+			document.getElementById(thismenu2).style.display = "block";		
+		}
+ 
+		
+		hideALLMenus();
+
+	</script> 
+       
+       
+        <h3>Advantages of JavaScript</h3>
+        
+        <p>Some advantages of using JavaScript is that it allows websites to be interactive. This is an advantage because from the example above of the navigation it allows the user to interact with the website. JavaScript also can be used to alert the users, for example: If there happens to be a form on the website and the user enters incorrect data then a message box would appear saying something like "Please only enter numeric data into this box". Another advantage is that everyone can use JavaScript without purchasing a license.</p>
+       
+
+        
+        <h3>Disadvantages of JavaScript</h3>
+        
+        <p>Even though JavaScript has many of its benefits there are also drawbacks such as browser issues and compatibility. JavaScript can sometimes have Web Browser problems this is because JavaScript is only written to support a few Web Browsers. For example, if a client has happened to use a lot of JavaScript within their website some users may not be able to see the work as they won't have the correct browser. </p>
+         <p>Another disadvantage of JavaScript is the Security. For example, because JavaScript is a client side scripting language any code that gets used will then be executed on the users computer. This is a risk because incorrect data could cause problems on the users computer.</p>   
+
+         
+		<div id="footer"> &copy; 2012 - Cerys Gibbins </div>
+            </div> 
+            
+        </body>
+</html>

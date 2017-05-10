@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>        
+    	<link rel="stylesheet" type="text/css" href="reset.css" /> 
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <script type="text/javascript" src="http://nptcstudents.co.uk/andrewg/jsweb/scripts/jquery.js"></script>
+        <script type="text/javascript" src="trans-javascript.js"></script>
+ 
+        
+   	 	<title>W3B Design</title>
+     </head>
+     <body> 
+        
+             <div id="container"><!--  Start of Container Div  -->
+                <div id="header"><!--  Start of Header Div  -->
+                <img src="images/logo.png" id="header_logo" />  
+                <h1>Customisation of Web Pages</h1>
+            </div>
+                   
+              <!--  this is start of the menu block, it will be floated left -->
+             <div id="menu">
+                <ul>
+                    <li><a href="index.html" id="HomeLink">HOME</a></li>
+                    <li><a href="CSS.html" id="CSSLink">CSS</a></li>
+                    <li><a href="Javascript.html" id="JavaScriptLink">JavaScript</a></li>
+                    <li><a href="Design.html" id="DesignLink">Design</a></li>
+                    <li><a href="Test.html" id="TestLink">Test</a></li>
+               </ul>
+             </div><!--  this is end of the menu block -->
+                      
+             
+            <div class="exampleblock" id="myClock">
+                Clock
+            </div>    
+           
+                <script type="text/javascript">
+                // this is a working example of a clock
+                var timer = setTimeout(updateTheClock,1000);
+                
+                function updateTheClock() {
+                    var thisTime = new Date();
+                    var h = thisTime.getHours();
+                    var m = thisTime.getMinutes();
+                    var s = thisTime.getSeconds();								
+                    var time = h + ":" + m + ":" + s;
+                    document.getElementById("myClock").innerHTML = time;
+                    timer = setTimeout(updateTheClock,1000);
+                }
+               </script>
+               
+                      
+           <div id="submenuu2">
+                <ul>
+                    <li><a href="FundamentalsOfJS.html" id="FundamentalsOfJS">Fundamentals of a Scripting Language</a></li>
+                    <li><a href="FunctionalityOfJS.html" id="FunctionalityOfJS">How Scripting Languages Improve Functionality</a></li>
+                    <li><a href="BrowserIssues.html" id="BrowserIssues">Cross Browser Issues</a></li>
+               </ul>
+            </div>
+                    
+            <h3>Cross Browser Issues</h3>
+            
+            <p>JavaScript isn't as standard as HTML and CSS. The coding of JavaScript is starting to be more difficult to code because newer web browsers are being released. This is because JavaScript is becoming more universal in its implementation and its more difficult to update through web browsers.</p>
+            <p>It's known that the most incompatible example in the cross browser is the event object. The event handlers are used to trigger blocks of code in the web page but scripting needs to be used so it knows which elements needs to be triggered in the web page.</p>
+            
+            <h3>Mozilla Firefox</h3>
+            
+            <p>In the Mozilla Firefox web browser the event object will be created each time when the event handler gets triggered on the web page, then when the event handler gets triggered it passes on what ever code the event handler needs. Below is an example:</p>
+            
+                <input type="button" name="eventButton" 
+     value="Event Object Button (Firefox)" id="ffButton" />
+     
+				<script language="javascript" type="text/javascript">
+                    document.getElementById('ffButton').onclick = function(event) {
+                        alert('You clicked the ' + event.target.value + ' button');
+                    }
+                </script>
+                
+            <p>The working example above only works in the W3C web browser, this is because the JavaScript block has been set to a new function when the 'Event Object Button (Firefox)' gets clicked on.</p>
+            
+            <h3>Internet Explorer</h3>
+            
+            <p>In Internet Explorer the event object works in a different way compared to the Firefox web browser. When the event object gets triggered in IE the event objects gets updated. Below is a working example:</p>
+            
+            	<input type="button" name="eventButton" value="Event Object Demo Button (IE)"
+ onclick="alert('You clicked the ' + window.event.srcElement.value)" />
+ 
+ 			<p>This button will only work in Internet Explorer. The button gets the information from the text on the element triggers the event to allow it to work. The event object lives in the <b>window.event</b> element. The window object represents everything on the web page. It's the highest level JavaScript object and it corresponds the web browser window. The way Internet Explorer does it is very wasteful because it keeps each event for as long as possible and this uses a lot of memory. Where as, with Firefox it only does it when the event is called. </p>
+            
+            <h3>How do you make this code work in all browsers?</h3>
+            
+            <p>To make the event object handler code work in all browsers I think it would be easier and faster if you check the compatibilities instead of finding out what web browser to use because you can work out which code model will need to be used. Below is an example:</p>
+            
+               <input type="button" name="eventButtonGlobal2" 
+            value="This button will work in all browsers." id="globalEventButton2" />
+    
+            <div class="exampleblock" id="browserVersion3">
+                Empty.
+            </div>
+
+			<script language="javascript" type="text/javascript">
+            document.getElementById('globalEventButton2').onclick = function (event) {
+				var eventButtonValue = "";
+				if (window.event) {
+					eventButtonValue = window.event.srcElement.value;
+				}
+				else {
+					eventButtonValue = event.target.value;
+				}
+			   
+                document.getElementById('browserVersion3').innerHTML = 
+                    "You clicked, " + eventButtonValue;
+					
+            }
+            </script>  
+			
+            <p>The button above should now work in all browsers. When the user clicks the button the text underneath will change from " Empty." to "You clicked, this button will work in all browsers.". </p>
+
+			<p>Below is the code which allows the button to work in all browsers. The reason why we use <b>event.target.value</b> is because it allows us to reference the target of the object. The <b>target</b> and <b>srcElement</b> both return the HTML element that the event took place on.</p>
+
+					
+            <pre>function reportMyBrowser(event) {
+
+var eventButtonValue = "";
+    if (window.event) {
+        eventButtonValue = window.event.srcElement.value;
+    }
+    else {
+        eventButtonValue = event.target.value;
+    }
+   
+}</pre>
+
+			<p>This code tells me that if the user is using Internet Explorer then the IF block of the code will work. The <b>srcElement</b> lives inside the <b>window.event</b> element.  If the user isn't using Internet Explorer and they are using any kind of W3C web browsers including Firefox, Safari etc the bottom part of the code in the ELSE block will work. The <b>event.target</b> attribute targets the element that triggers the event. The <b>event</b> attribute is a string that specifies the event. </p>
+
+                            
+
+		<div id="footer"> &copy; 2012 - Cerys Gibbins </div>
+            </div> 
+            
+        </body>
+</html>
